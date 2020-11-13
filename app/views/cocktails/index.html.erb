@@ -1,0 +1,17 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <div class="navbar-brand">
+        <%= link_to 'Add a new cocktail', new_cocktail_path %>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <ul class="list-group">
+    <% @cocktails.each do |cocktail| %>
+      <li class="list-group-item"><h1><%= link_to cocktail.name, cocktail_path(cocktail) %></h1></li>
+    <% end %>
+    </ul>
+  </div>
+</nav>
+
