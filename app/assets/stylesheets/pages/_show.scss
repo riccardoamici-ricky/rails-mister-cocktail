@@ -1,0 +1,22 @@
+ul {
+  list-style: none;
+  width: 200px;
+  text-align: left;
+  padding: 0;
+  margin-left: 15px;
+}
+
+.cocktail-info {
+  display: flex;
+  justify-content: center;
+}
+
+.img-big{
+  border-radius: 50%;
+  border: 2px solid;
+  border-color: $rum;
+}
+
+.ingredients{
+  padding-top: 40px;
+}

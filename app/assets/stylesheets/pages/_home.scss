@@ -1,1 +1,10 @@
 // Specific CSS for your home-page
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin: 50px auto;
+}
+.pro {
+  color: $black;
+}

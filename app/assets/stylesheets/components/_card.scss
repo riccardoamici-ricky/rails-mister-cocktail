@@ -1,0 +1,38 @@
+.card-category{
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // boxshadow-: 0px 0px 10px $gray;
+  margin-bottom: 20px;
+  border: 2px solid;
+  border-color: $rum;
+   h1 {
+    color: $white;
+    text-shadow: $superblue;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+   }
+}
+h1 {
+  font-family: 'Anton', sans-serif;
+}
+p {
+  color: $white;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+.card-category:hover{
+  opacity: 0.8 !important;
+}
+.card-category a{
+  color: $white;
+  :hover{
+    color: $white;
+  }
+}
+.title{
+  color: $rum;
+  text-align: center
+}

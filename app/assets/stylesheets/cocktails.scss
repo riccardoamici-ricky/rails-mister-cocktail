@@ -1,3 +1,22 @@
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+body {
+  background-color: $rum;
+  padding-bottom: 90px;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+.container {
+  background-color: $dark-blue;
+  color: $lighty-gray;
+  padding: 30px;
+}
+.list-group { background-color: $rum;  }
+
+.row {
+  background: $light-gray;
+  margin-bottom: 40px;
+}

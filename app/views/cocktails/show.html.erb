@@ -1,25 +1,33 @@
 <div class="container">
   <h3>Details of the cocktail:</h3>
   <h1><%= @cocktail.name %></h1>
-  <ul>
-    <h4>Ingredients</h4>
-    <% @cocktail.ingredients.each do |ingredient| %>
-      <li>
-        <%= ingredient.name %>
-      </li>
+  <div class="cocktail-info">
+    <% if @cocktail.photo.attached? %>
+      <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill, class: "img-big" %>
     <% end %>
-  </ul>
-  <ul>
-    <h4>Doses</h4>
-    <% @cocktail.doses.each do |dose| %>
-      <li>
-            dose_path(dose),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %>
-      </li>
-    <% end %>
-  </ul>
-  <%= link_to "Add dose", new_cocktail_dose_path(@cocktail) %><br>
-  <%= link_to "Back to list", '/cocktails' %><br>
+    <div class="ingredients">
+      <ul>
+        <h1>Ingredients</h1>
+        <% @cocktail.ingredients.each do |ingredient| %>
+          <li>
+            <%= ingredient.name %>
+          </li>
+        <% end %>
+      </ul>
+      <ul>
+        <h1>Doses</h1>
+        <% @cocktail.doses.each do |dose| %>
+          <li>
+            <% dose.ingredient.name %> <%= dose.description %>
+              <%= link_to "X", dose_path(dose),
+                method: :delete,
+                data: { confirm: "Are you sure?" } %>
+            <% end %>
+          </li>
+      </ul>
+    </div>
+  </div>
+  <%= link_to "Add dose ", new_cocktail_dose_path(@cocktail) %><br>
+  <%= link_to "Back to list", '/cocktails' %>
 </div>
 
